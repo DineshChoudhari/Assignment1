@@ -158,6 +158,8 @@ public class Main{
                     mn.delete();
                 case 4:
                     mn.read();
+                case 5:
+                    exit();
             }
            }while (ch>5);
     }
