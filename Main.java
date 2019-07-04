@@ -103,7 +103,7 @@ public class Main{
 
     public void read(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter ID to delete:");
+        System.out.println("Enter ID of record which you want to display:");
         String user_id = sc.nextLine();
         try
         {
@@ -118,9 +118,8 @@ public class Main{
             ResultSet rs = stmt.executeQuery(q1);
             if (rs.next())
             {
-                System.out.println("User-Id : " + rs.getString(1));
-                System.out.println("User_Name :" + rs.getString(2));
-                System.out.println("User_Address :" + rs.getString(3));
+                System.out.println("User-Id : " + rs.getString(1)+"\n User_Name :" + rs.getString(2)+"\nUser_Address :" + rs.getString(3));
+                
             }
             else
             {
