@@ -34,3 +34,26 @@ public class DeleteInfo
         }
     }
 }
+public void delete() {
+    System.out.println("enter id which record you want to delete");
+    int id1=sc.nextInt();
+    try {
+
+        Class.forName("com.mysql.jdbc.Driver");
+        try (Connection conn =
+                     DriverManager.getConnection("jdbc:mysql://localhost:3306/userdata",
+                             "root", "new-password")) {
+
+
+            Statement st = conn.createStatement();
+
+            int a=st.executeUpdate("DELETE FROM userinfo WHERE id="+id1+"");
+
+            System.out.println("ajsjbdkjasnda");
+
+        }
+    } catch (Exception e) {
+        System.err.println("Something went wrong!");
+        e.printStackTrace();
+    }
+}
